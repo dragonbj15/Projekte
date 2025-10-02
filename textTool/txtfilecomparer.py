@@ -20,9 +20,9 @@ def add(file_path):
                 if "=" in line and not line.strip().endswith('"'):
                     fixed_line = line.strip().split("=")
                     
-                    if "A" in fixed_line[1]:
+                    if "ACB" in fixed_line[1]:
                         fixed_line[-1] = fixed_line[-1].strip()
-                    elif "M" in fixed_line[1]:
+                    elif "MNO" in fixed_line[1]:
                         fixed_line[-1] = fixed_line[-1].strip()
                     else:
                         fixed_line[-1] = '"' + fixed_line[-1] + '"'
@@ -109,6 +109,7 @@ for file in path:
     remove(input)
     check_Klammer(input)
     add(input)
+
 
 
 
